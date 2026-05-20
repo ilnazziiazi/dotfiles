@@ -5,12 +5,13 @@ source /config.env
 source /setup_env.sh
 
 echo "Installing additional packages..."
-pacman -Sy --noconfirm base-devel git sudo zsh curl zram-generator \
+pacman -Syu --noconfirm base-devel git sudo zsh curl zram-generator \
   vpl-gpu-rt pipewire-alsa pipewire-pulse \
-  docker tailscale polkit hyprpolkitagent wayland xorg-xwayland \
-  xdg-desktop-portal-gnome fuzzel waybar mako grim slurp wl-clipboard \
+  docker tailscale polkit plasma-polkit-agent wayland xwayland-satellite \
+  xdg-desktop-portal-gnome xdg-desktop-portal-gtk nautilus alacritty dms-shell-niri matugen cava qt6-multimedia-ffmpeg \
+  fuzzel waybar mako grim slurp wl-clipboard \
   stow neovim tmux swaybg pavucontrol zoxide swayidle gnome-keyring \
-  noto-fonts noto-fonts-emoji
+  noto-fonts noto-fonts-emoji dconf
 
 echo "Configuring timezone..."
 ln -sf "/usr/share/zoneinfo/${TIMEZONE}" /etc/localtime
@@ -103,12 +104,3 @@ rm -rf "/home/${USERNAME}/yay-bin"
 echo "Setting up dotfiles..."
 chown -R "${USERNAME}:${USERNAME}" "/home/${USERNAME}/dotfiles"
 bash "/home/${USERNAME}/dotfiles/setup/arch/03-chroot-user.sh"
-
-echo "Configuring autostart (Niri on tty1 login)..."
-sudo -u "${USERNAME}" touch "/home/${USERNAME}/.zshrc"
-cat <<'EOT' >"/home/${USERNAME}/.zprofile"
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "$(tty)" = "/dev/tty1" ]; then
-    exec niri-session
-fi
-EOT
-chown "${USERNAME}:${USERNAME}" "/home/${USERNAME}/.zprofile"

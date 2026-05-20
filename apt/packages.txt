@@ -1,0 +1,8 @@
+ca-certificates
+build-essential
+curl
+stow
+tmux
+zoxide
+lazygit
+fd-find

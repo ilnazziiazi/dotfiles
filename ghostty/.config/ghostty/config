@@ -1,0 +1,17 @@
+macos-option-as-alt = true
+
+macos-titlebar-style = hidden
+theme = light:Catppuccin Latte,dark:Catppuccin Macchiato
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+maximize = true
+window-save-state = always
+mouse-hide-while-typing = true
+selection-clear-on-typing = true
+copy-on-select = clipboard
+
+font-family = "SF Mono Nerd Font"
+font-size = 17
+font-thicken = true

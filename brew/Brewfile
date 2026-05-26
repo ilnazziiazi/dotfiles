@@ -1,10 +1,9 @@
 tap "anomalyco/tap"
+tap "asmvik/formulae"
 tap "epk/epk"
 tap "theboredteam/boring-notch"
 # Download with resuming and segmented downloading
 brew "aria2"
-# MPEG-4 command-line tool
-brew "atomicparsley"
 # Versatile and fast Unicode/ASCII/ANSI graphics renderer
 brew "chafa"
 # Cross-platform make
@@ -13,16 +12,18 @@ brew "cmake"
 brew "coreutils"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Utility to configure multi-display resolutions and arrangements
-brew "displayplacer"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Distributed revision control system
+brew "git"
 # Multi-platform library for OpenGL applications
 brew "glfw"
-# Graph visualization software from AT&T and Bell Labs
-brew "graphviz"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Client library for huggingface.co hub
+brew "hf"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
@@ -47,25 +48,28 @@ brew "openjdk@21"
 brew "pandoc"
 # Shell command parallelization utility
 brew "parallel"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # Paste PNG into files
 brew "pngpaste"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
-brew "python@3.14"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Open source continuous file synchronization application
-brew "syncthing", restart_service: :changed
+brew "syncthing",
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Internet file retriever
 brew "wget"
 # Feature-rich command-line audio/video downloader
@@ -74,8 +78,8 @@ brew "yt-dlp"
 brew "zoxide"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode"
-# GPU-accelerated terminal emulator
-cask "alacritty"
+# Simple hotkey-daemon for macOS.
+brew "asmvik/formulae/skhd"
 # Memory training application
 cask "anki"
 # Tool to show live information about the batteries in various devices
@@ -83,16 +87,16 @@ cask "coconutbattery"
 # Voice and text chat software
 cask "discord"
 cask "epk/epk/font-sf-mono-nerd-font"
-# Web browser
-cask "helium"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Chromium-based web browser
+cask "helium-browser"
 # Free and open-source media player
 cask "iina"
 # System monitoring app
 cask "istat-menus"
 # Keyboard customiser
 cask "karabiner-elements"
-# Discover, download, and run local LLMs
-cask "lm-studio"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
 # Full TeX Live distribution with GUI applications
@@ -115,5 +119,7 @@ cask "skim"
 cask "slack"
 # Unpacks archive files
 cask "the-unarchiver"
+# Utility to hide the notch
+cask "topnotch"
 # Video communication and virtual meeting platform
 cask "zoom"
